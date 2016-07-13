@@ -6,9 +6,16 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+nav .page-title{
+  height: 100%;
+}
+
+
+
+
+
+nav ul a{
+  color:black;
 }
 
 p {
@@ -70,8 +77,38 @@ footer.page-footer {
   height: 300px;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+nav div a{
+  margin-left: 20px;
+}
+body, nav{
+  background: #f7f7f7;
+}
+
+.invisible{
+  opacity: 0;
+}
+
+h2{
+  color: #795548;
+}
+
+nav{
+  background: white;
+}
+nav ul a:hover{
+  background-color: rgba(77, 182, 172,1);
+  color:white;
+}
+
+.side-nav a:hover {
+  background-color: rgba(77, 182, 172,1);
+  color:white;
+}
+
+nav div a img:hover{
+  height:102%;
+}
+
+.red{
+  background: red;
 }
