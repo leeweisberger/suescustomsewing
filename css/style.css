@@ -69,7 +69,7 @@ footer.page-footer {
 }
 
 .glass{
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
 }
 #map{
   margin: 0;
@@ -87,9 +87,29 @@ body, nav{
 .invisible{
   opacity: 0;
 }
+h1{
+  font-size: 600%;
+}
 
 h2{
   color: #795548;
+  font-size:500%;
+}
+h3{
+  font-size:350%;
+}
+
+h3 i{
+  color:#8BC34A;
+}
+
+
+h6{
+  font-size:200%
+}
+
+.big-para{
+  font-size:120%;
 }
 
 nav{
@@ -111,4 +131,37 @@ nav div a img:hover{
 
 .red{
   background: red;
+}
+
+.fill-screen-almost{
+  height:calc(100vh - 64px);
+}
+
+.fill-screen{
+  height: 105vh;
+}
+
+.stitched {
+   color: #fff;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+}
+
+.lilac{
+  background: #D33F49;
+}
+
+
+@media only screen and (max-device-width: 450px) and (orientation: portrait){
+  .phone-check{
+    height:100%;
+  }
+  
+}
+
+@media only screen and (max-device-height:500px) and (orientation:landscape){
+  .phone-check{
+    height:100%;
+  }
+  
 }
