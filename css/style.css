@@ -133,6 +133,10 @@ nav div a img:hover{
   background: red;
 }
 
+.green{
+  background: green;
+}
+
 .fill-screen-almost{
   height:calc(100vh - 64px);
 }

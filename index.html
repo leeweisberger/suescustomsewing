@@ -187,6 +187,13 @@
                     <h5 class="light grey-text text-lighten-3">Custom window treatments.</h5>
                   </div>
                 </li>
+                <li>
+                  <img src="images/windows2.jpg"> 
+                  <div class="caption right-align">
+                    <h3>Decor</h3>
+                    <h5 class="light grey-text text-lighten-3">Home decor.</h5>
+                  </div>
+                </li>
               </ul>
             </div>       
           </div>
@@ -260,27 +267,27 @@
                 <div class="row">
                   <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="name" name="name" type="text" class="validate">
+                    <input id="name" name="name" type="text" class="validate" required>
                     <label for="name">Name</label>
                   </div>
 
                   <div class="input-field col s6">
                     <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" name="email" class="validate">
+                    <input id="email" type="email" name="email" class="validate" required>
                     <label for="email" data-error="Incorrect Email Format" data-success="right">Your Email</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
                     <i class="material-icons prefix">toc</i>
-                    <input id="subject" type="text" name="subject" class="validate">
+                    <input id="subject" type="text" name="subject" class="validate" required>
                     <label for="subject">Subject</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="body" name="body" class="materialize-textarea"></textarea>
+                    <textarea id="body" name="body" class="materialize-textarea" required></textarea>
                     <label for="body">Email Body</label>
                   </div>
                 </div>
@@ -355,11 +362,7 @@
     </script>
     <script>
       $("#form").submit(function(e) {
-       if( !$(this).val() ) {
-            Materialize.toast('Please Fill In All Fields', 4000,"red") // 4000 is the duration of the toast
-
-          }
-          else{
+        e.preventDefault(); // avoid to execute the actual submit of the form.
         var url = "https://shrouded-beach-93379.herokuapp.com/sendMail"; // the script where you handle the form input.
 
         $.ajax({
@@ -368,13 +371,10 @@
                data: $("#form").serialize(), // serializes the form's elements.
                success: function(data)
                {
-                     Materialize.toast('Email Sent', 4000) // 4000 is the duration of the toast
+                     Materialize.toast('Email Sent', 4000, "green") // 4000 is the duration of the toast
 
                    }
                  });
-      }
-
-      e.preventDefault(); // avoid to execute the actual submit of the form.
     });
   </script>
 </body>
